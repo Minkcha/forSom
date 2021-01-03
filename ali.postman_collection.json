@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "7e4fd83e-fa99-4383-b81d-277c3975fefa",
+		"name": "ali",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"testrunner\",\r\n    \"surname\":\"pretest\",\r\n    \"citizenId\":\"1234\",\r\n    \"email\":\"mg@asdeeef\",\r\n    \"password\":\"12345\",\r\n    \"tel\": \"012346378612836\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/findAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"findAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history/findAllPackages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userPackages\":  [\r\n        \"5fef5378dd1d9a2c643814c7\",\r\n        \"5fef569a29c880049b380237\",\r\n        \"5ff01dc24c881a7b73fb6bd8\",\r\n        \"5ff033dbd7503f40f87ba741\",\r\n        \"5ff034a40c78e81e0564613a\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/history/findAllPackages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"history",
+						"findAllPackages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mock@email.com\",\r\n    \"password\":\"pwd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/claimFrom/5fef4e34461c8f1d95c86396/addClaim",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"packageId\":\"5ff183dcef59c66863026979\",\r\n\r\n     \"trackNumber\":\"as123456\",\r\n\r\n     \"nameProduct\":\"pandora\",\r\n\r\n     \"deliveryCompany\":\"Kerry\",\r\n\r\n\r\n     \"photoProduct\":\"url//uhgujvflyfgi\",\r\n\r\n     \"price\":12000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/claimFrom/5ff183aaef59c66863026978/addClaim",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"claimFrom",
+						"5ff183aaef59c66863026978",
+						"addClaim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/5fef4e34461c8f1d95c86396/addPackage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"typePackage\":3,\r\n \"price\": 5000  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/5ff183aaef59c66863026978/addPackage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"5ff183aaef59c66863026978",
+						"addPackage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/history/findAllClaims",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userClaims\": [ \r\n        \"5fef6b6d5bdbab5ac9767893\", \r\n        \"5ff0ad64c6c3184be78e1118\", \r\n        \"5ff0aff7c6c3184be78e1119\"\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/history/findAllClaims",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"history",
+						"findAllClaims"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/5fef4e34461c8f1d95c86396/addPackage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"typePackage\":5,\r\n \"price\": 4577  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/5fef4e34461c8f1d95c86396/addPackage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"5fef4e34461c8f1d95c86396",
+						"addPackage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test\",\r\n    \"surname\":\"1\",\r\n    \"citizenId\":\"1\",\r\n    \"email\":\"111\",\r\n    \"password\":\"1\",\r\n    \"tel\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/claimFrom//findAllAvailablePackages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userPackages\":[ \r\n        \"5ff183dcef59c66863026979\", \r\n        \"5ff183f7ef59c6686302697a\", \r\n        \"5ff18401ef59c6686302697b\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/claimFrom//findAllAvailablePackages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"claimFrom",
+						"",
+						"findAllAvailablePackages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
